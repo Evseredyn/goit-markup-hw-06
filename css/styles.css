@@ -741,6 +741,6 @@ body {
     fill: var(--black-color);
 }
 
-.modal>p {
-    display: none;
-}
+/* textarea {
+    resize: vertical;
+} */

@@ -519,7 +519,8 @@ body {
     align-items: baseline;
 }
 
-.footer-socials {
+.footer-socials,
+.footer-form {
     margin-left: 92px;
 }
 
@@ -565,6 +566,24 @@ body {
     height: 20px; */
     fill:currentColor;
 }
+
+.footer-form-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-style: normal;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--first-title-color);
+}
+
+
+
+
+
 
 .portfolio-btn {
     padding: 6px 22px;

@@ -569,6 +569,14 @@ body {
     fill:currentColor;
 }
 
+.footer-form {
+
+}
+
+.footer-form-flex {
+    display: flex;
+}
+
 .footer-form-title {
     margin-top: 0;
     margin-bottom: 20px;
@@ -586,40 +594,48 @@ body {
     position: relative;
 }
 
-.footer-label {
-    position: absolute;
+.footer-field {
+    position: relative;
     /* top: 100px;
     left: 100px; */
     color: rgba(255, 255, 255, 0.60);
 }
 
+.footer-label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    /* transition: opacity var(--duration) var(--timing-function),  visibility var(--duration) var(--timing-function); */
+}
+
 .footer-input {
     width: 358px;
     height: 50px;
-    padding-left: 40px;
+    padding-left: 20px;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     font-family: var(--main-font);
     /* font-style: 16px; */
     font-weight: 400;
     line-height: 1.25;
-    letter-spacing: 1.03;
+    letter-spacing: 1.03px;
     color: rgba(255, 255, 255, 0.60);
     background-color: transparent;
 }
 
-.footer-label {
-    position: absolute;
+/* .footer-input:not(:placeholder-shown) + .email-prompt {
+    opacity: 0;
+} */
 
+.footer-field:focus-within > .footer-label {
+    opacity: 0;
 }
 
-.footer-flex {
+
+/* .footer-form-subscripe {
     display: flex;
-}
-
-.footer-form-subscripe {
-    display: flex;
-}
+} */
 
 .footer-btn {
     display: flex;
@@ -656,7 +672,7 @@ body {
     /* font-style: 16px; */
     font-weight: 400;
     line-height: 1.25;
-    letter-spacing: 1.03;
+    letter-spacing: 1.03px;
     color: rgba(255, 255, 255, 0.60);
 
 }
@@ -857,7 +873,6 @@ body {
 
 /* NEW FIELDS */
 
-
 .form-field {
     position: relative;
 }
@@ -865,16 +880,17 @@ body {
 
 .form-input {
     padding-left: 40px;
+    margin-top: 4px;
     width: 100%;
     height: 40px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
+    /* border-color: var(--akcent-color); */
 }
 
 .form-label {
     display: block;
     margin: 0px;
-    margin-bottom: 4px;
     font-family: var(--main-font);
     color: var(--text-color);
     font-weight: 400;
@@ -886,8 +902,8 @@ body {
     top: 28px;
     left: 12px;
     width: 18px;
-    height: 18px; 
-    background-color: var(--secondary-title-color);
+    height: 18px;
+    fill: currentColor;
 }
 
 .icon-phone {
@@ -896,11 +912,6 @@ body {
     left: 12px;
     width: 18px;
     height: 18px; 
-    background-color: var(--secondary-title-color);
-    /* border: 2px solid var(--secondary-title-color);
-    border-radius: 2px;
-    margin-right: 7px;
-    background-image: url("../images/icons.svg#icon-phone-black"); */
 }
 
 .icon-email {
@@ -908,41 +919,56 @@ body {
     top: 28px;
     left: 12px;
     width: 18px;
-    height: 18px; 
-    background-color: var(--secondary-title-color);
+    height: 18px;
 }
 
-.form-field:focus-within > span {
-    background-color: var(--akcent-color);
+.form-field.person:focus > .icon-person {
+    fill: var(--akcent-color);
+}
+
+.form-field.person:focus-within > .form-input {
+    border: var(--akcent-color);
+}
+
+.form-messange {
+    display: block;
 }
 
 
-.icon-form-field {
+/* .icon-form-field {
     position: absolute;
     fill: var(--secondary-title-color);
-}
-
- /*.form-field > input {
-    width: 100%;
-    height: 40px;
-    border-radius: 4px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
 } */
 
-.form-field > textarea {
+
+.message-field {
+    margin-top: 18px;
     padding: 12px 16px;
     width: 100%;
     font-family: var(--main-font);
     color: rgba(117, 117, 117, 0.5);
     font-weight: 400;
     font-size: 12px;
+    letter-spacing: 1.01px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
+    resize: none;
 }
 
-.form-comment {
+.form-message {
+    position: relative;
     margin: 0px;
     margin-bottom: 4px;
+    font-family: var(--main-font);
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.message-label {
+    position: absolute;
+    top: 0;
+    left: 0;
     font-family: var(--main-font);
     color: var(--text-color);
     font-weight: 400;
@@ -1006,7 +1032,7 @@ body {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.7;
-    letter-spacing: 1.03;
+    letter-spacing: 1.03px;
     color: var(--text-color)
 }
 

@@ -606,7 +606,7 @@ body {
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
-    /* transition: opacity var(--duration) var(--timing-function),  visibility var(--duration) var(--timing-function); */
+    transition: opacity var(--duration) var(--timing-function);
 }
 
 .footer-input {
@@ -622,6 +622,7 @@ body {
     letter-spacing: 1.03px;
     color: rgba(255, 255, 255, 0.60);
     background-color: transparent;
+    outline: none;
 }
 
 /* .footer-input:not(:placeholder-shown) + .email-prompt {
@@ -886,6 +887,12 @@ body {
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     /* border-color: var(--akcent-color); */
+    outline: none;
+    transition: color var(--duration) var(--timing-function);
+}
+
+.form-input:focus {
+    border: 1px solid var(--akcent-color);
 }
 
 .form-label {
@@ -903,7 +910,6 @@ body {
     left: 12px;
     width: 18px;
     height: 18px;
-    fill: currentColor;
 }
 
 .icon-phone {
@@ -920,14 +926,6 @@ body {
     left: 12px;
     width: 18px;
     height: 18px;
-}
-
-.form-field.person:focus > .icon-person {
-    fill: var(--akcent-color);
-}
-
-.form-field.person:focus-within > .form-input {
-    border: var(--akcent-color);
 }
 
 .form-messange {
@@ -953,6 +951,11 @@ body {
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     resize: none;
+    outline: none;
+}
+
+.message-field:focus {
+    border: 1px solid var(--akcent-color);
 }
 
 .form-message {
@@ -1041,6 +1044,8 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    outline: none;
+    transition: opacity var(--duration) var(--timing-function);
 }
 
 .checkbox:checked + .icon-check {

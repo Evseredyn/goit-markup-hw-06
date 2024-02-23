@@ -569,6 +569,7 @@ body {
     fill:currentColor;
 }
 
+
 .footer-form {
 
 }
@@ -893,6 +894,7 @@ body {
 
 .form-input:focus {
     border: 1px solid var(--akcent-color);
+
 }
 
 .form-label {
@@ -910,6 +912,7 @@ body {
     left: 12px;
     width: 18px;
     height: 18px;
+    transition: fill var(--duration) var(--timing-function);
 }
 
 .icon-phone {
@@ -917,8 +920,8 @@ body {
     top: 28px;
     left: 12px;
     width: 18px;
-    height: 18px; 
-}
+    height: 18px;
+    transition: fill var(--duration) var(--timing-function);}
 
 .icon-email {
     position: absolute;
@@ -926,7 +929,15 @@ body {
     left: 12px;
     width: 18px;
     height: 18px;
+    transition: fill var(--duration) var(--timing-function);}
+
+
+.form-input:focus ~ .icon-person,
+.form-input:focus ~ .icon-phone,
+.form-input:focus ~ .icon-email {
+    fill: var(--akcent-color);
 }
+
 
 .form-messange {
     display: block;

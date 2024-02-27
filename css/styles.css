@@ -833,7 +833,7 @@ body {
 
 .modal-title {
     font-family: var(--main-font);
-    font-style: 20px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--secondary-title-color);
     margin: 0;
